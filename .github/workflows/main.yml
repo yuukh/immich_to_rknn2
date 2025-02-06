@@ -15,23 +15,18 @@ jobs:
       run: git clone https://huggingface.co/immich-app/LABSE-Vit-L-14 --depth 1
         LABSE-Vit-L-14
     - name: Run textual build script for LABSE-Vit-L-14 on rk3588
-      run: python3 build_rknn.py LABSE-Vit-L-14/textual/model.onnx rk3588
+      run: python3 build_rknn.py LABSE-Vit-L-14/ rk3588
     - name: Upload textual artifact for LABSE-Vit-L-14 on rk3588
       uses: actions/upload-artifact@v4
       with:
         name: LABSE-Vit-L-14-textual-rk3588.rknn
         path: LABSE-Vit-L-14/textual/rk3588.rknn
-    - name: Remove uploaded textual model for LABSE-Vit-L-14 on rk3588
-      run: rm LABSE-Vit-L-14/textual/rk3588.rknn
-    - name: Run visual build script for LABSE-Vit-L-14 on rk3588
-      run: python3 build_rknn.py LABSE-Vit-L-14/visual/model.onnx rk3588
     - name: Upload visual artifact for LABSE-Vit-L-14 on rk3588
       uses: actions/upload-artifact@v4
       with:
         name: LABSE-Vit-L-14-visual-rk3588.rknn
         path: LABSE-Vit-L-14/visual/rk3588.rknn
-    - name: Remove uploaded visual model for LABSE-Vit-L-14 on rk3588
-      run: rm LABSE-Vit-L-14/visual/rk3588.rknn
+
     
 on:
   pull_request:
