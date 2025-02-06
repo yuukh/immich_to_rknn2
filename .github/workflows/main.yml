@@ -38,7 +38,6 @@ jobs:
     - name: Remove uploaded visual model for LABSE-Vit-L-14 on rk3588
       run: rm LABSE-Vit-L-14/visual/rk3588.rknn
     
-name: Run Python Build Script
 on:
   pull_request:
     branches:
