@@ -1,7 +1,7 @@
 name: RKNN Model Conversion Test
 jobs:
   run-python-script:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
