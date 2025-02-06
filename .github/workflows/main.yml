@@ -42,7 +42,7 @@ name: Run Python Build Script
 on:
   pull_request:
     branches:
-    - main
+    - unificli
   push:
     branches:
-    - main
+    - unificli
