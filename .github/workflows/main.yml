@@ -8,7 +8,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: 3.x
+        python-version: 3.12
     - name: install dependencies
       run: sudo apt-get update -y && sudo apt-get install -y python3-pip git libsm6 --no-install-recommends -y && python -m pip install -r requirements.txt && git lfs install
     - name: Clone model LABSE-Vit-L-14
