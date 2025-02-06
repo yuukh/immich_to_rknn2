@@ -9,11 +9,11 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: 3.x
-    - name: Install dependencies
+    - name: install dependencies
       run: sudo apt-get update -y && sudo apt-get install -y python3-pip git libsm6 --no-install-recommends -y && python -m pip install -r requirements.txt && git lfs install
     - name: Clone model LABSE-Vit-L-14
       run: git clone https://huggingface.co/immich-app/LABSE-Vit-L-14 --depth 1
-        LABSE-Vit-L-14
+        # LABSE-Vit-L-14
     - name: Run textual build script for LABSE-Vit-L-14 on rk3588
       run: python3 build_rknn.py LABSE-Vit-L-14/textual/model.onnx rk3588
     - name: Upload textual artifact for LABSE-Vit-L-14 on rk3588
